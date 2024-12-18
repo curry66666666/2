@@ -88,6 +88,12 @@ body {
   transform: scale(1.2);
   color: #ff66cc; /* 悬停时图标颜色改为粉色 */
 }
+@media (max-width: 768px) {
+  .navbar ul li a {
+    font-size: 9px; /* 原来的一半大小 */
+  }
+}
+
 
 /* 搜索栏样式 */
 .search-bar {
@@ -169,6 +175,13 @@ body {
 .carousel-image.active {
   opacity: 1;
 }
+.navbar {
+  position: fixed; /* 固定在顶部 */
+  width: 100%;
+  top: 0;
+  z-index: 1000; /* 确保导航栏在最上层 */
+}
+
 
 /* 手机端导航栏样式 */
 @media (max-width: 768px) {
@@ -465,6 +478,10 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
+#ad-modal {
+  z-index: 10000; /* 一个较高的值，确保弹窗在最上层 */
+}
+
 
 /* 弹窗背景遮罩样式 */
 #ad-modal {
